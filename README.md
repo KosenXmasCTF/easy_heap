@@ -2,6 +2,8 @@
 ![Genre: Pwn](https://img.shields.io/badge/genre-pwn-brightgreen?style=for-the-badge)
 ![Author: iwancof](https://img.shields.io/badge/author-iwancof-lightgrey?style=for-the-badge)
 
+彼はすべてを忘れてしまう、自身の名前も生きる意味さえも....。そこで彼に残された唯一の記憶、C言語の知識を使ってメモアプリを作ることにした。彼の脳はもともと0x300byteだけだったので、アプリに大変満足しているらしい。よかったね。
+
 ## Files
 - main.c
 - Makefile
