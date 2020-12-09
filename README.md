@@ -19,6 +19,8 @@ $ python ./exploit.py
 ```
 
 ## writeup
-writeup.txt に書いてあるやつを見てください。
+
+初心者向けの問題。最新のglibcだとPROTECT_PTRによってアドレスが変わっているので、それをどうにかする。
+あとは典型的なUAFがあるため、alloc -> edit -> alloc -> alloc で好きな場所を取ってこれる。
 
 
