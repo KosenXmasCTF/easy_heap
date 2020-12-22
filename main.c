@@ -16,15 +16,13 @@ void show_menu() {
 
 int get_int() {
   int ret;
-  scanf("%d", &ret);
-  fflush(stdin);
+  scanf("%d%*c", &ret);
 
   return ret;
 }
 
 int get_index() {
   printf("enter index:");
-  fflush(stdout);
   int ret = get_int();
   if(ret < 0 || 2 < ret) {
     puts("invalied index. index < 0 || 2 < index");
@@ -44,7 +42,6 @@ void free_at(char *address[3]) {
 void edit(char *address[3]) {
   int index = get_index();
   printf("enter user input:");
-  fflush(stdout);
   scanf("%1000s", address[index]);
 }
 void show_adr(char *address[3]) {
@@ -58,12 +55,14 @@ void show_mem(char *address[3]) {
 }
 
 int main() {
+	setvbuf(stdin, NULL, _IONBF, 0);
+	setvbuf(stdout, NULL, _IONBF, 0);
+
   char *address[3] = {0};
   printf("address at %p\n", &address);
   while(1) {
     show_menu();
     printf("enter command:");
-    fflush(stdout);
     switch(get_int()) {
       case 0: {
         allocate(address);
