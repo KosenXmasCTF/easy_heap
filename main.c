@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<unistd.h>
 #include<stdlib.h>
 
 #define BUFSIZE 0x100
@@ -55,6 +56,7 @@ void show_mem(char *address[3]) {
 }
 
 int main() {
+	alarm(60);
 	setvbuf(stdin, NULL, _IONBF, 0);
 	setvbuf(stdout, NULL, _IONBF, 0);
 
