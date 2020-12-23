@@ -1,1 +1,1 @@
-xm4s{this_is_dummy_flag}
+xm4s{protect_ptr_is_very_fast}
